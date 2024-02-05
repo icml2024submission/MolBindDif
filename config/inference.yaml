@@ -1,0 +1,37 @@
+# Configuration for inference on SE(3) diffusion experiments.
+defaults:
+  - override hydra/launcher: joblib
+  - _self_
+
+
+bd:
+  name:
+  gpu_id: null  # CUDA GPU to use
+  seed: 123
+  nof_samples: all
+
+  # Directory of software, weights, and outputs.
+  pt_hub_dir: ./.cache/torch/
+  output_dir: ./inference_outputs/
+  input_dir: 
+  input_file: ./test.csv
+  
+
+  # Path to model weights.
+  model_path: ./trained_models/big_model_9.2_nr
+
+
+  diffusion:
+    # Number of steps.
+    num_t: 100
+    # Analogous to sampling temperature.
+    noise_scale: 0.0
+    # Final t.
+    min_t: 0.01
+
+
+lp:
+  # Path to model weights.
+  model_path: ./linkpred/trained_models/main_model_2.0_ros
+
+
