@@ -1,0 +1,44 @@
+# Configuration for inference on SE(3) diffusion experiments.
+defaults:
+  - base
+  - _self_
+
+
+inference:
+  # CSV for path and metadata to training examples.
+  csv_path: /home/klypar/Desktop/PPI3D/trainset_new_50.csv
+  name: null
+  gpu_id: null  # CUDA GPU to use
+  seed: 123
+
+  # Directory of software, weights, and outputs.
+  pdb_input: True
+  pdb_name: protein_nucleic-8b2l-1-8b2l_O1-1-8b2l_A3_h1_B3_W2_i2_B1-1
+  pt_hub_dir: ./.cache/torch/
+  output_dir: ./inference_outputs/
+  input_dir: ./input/
+  sample_name: prot
+
+  # Path to model weights.
+  weights_path: ./weights/step_400000.pth
+
+  diffusion:
+    # Number of steps.
+    num_t: 500
+    # Analogous to sampling temperature.
+    noise_scale: 0.0
+    # Final t.
+    min_t: 0.01
+
+  samples:
+    # Number of backbone samples per sequence length.
+    samples_per_length: 1
+    # Number of ESMFdold samples per backbone sample.
+    seq_per_sample: 2
+    # Minimum sequence length to sample.
+    min_length: 100
+    # Maximum sequence length to sample.
+    max_length: 500
+    # gap between lengths to sample. i.e. this script will sample all lengths
+    # in range(min_length, max_length, length_step)
+    length_step: 5

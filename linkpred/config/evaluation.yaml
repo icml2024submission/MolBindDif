@@ -1,0 +1,31 @@
+defaults:
+  - base
+  - _self_
+
+
+evaluation:
+  # CSV for path and metadata to training examples.
+  csv_path: /home/klypar/Desktop/PPI3D/trainset_angle_100.csv
+  name: null
+  gpu_id: null  # CUDA GPU to use
+  seed: 123
+  nof_samples: all
+
+  # Directory of software, weights, and outputs.
+  pt_hub_dir: ./.cache/torch/
+  output_dir: ./evaluation_outputs/
+  
+
+  # Path to model weights.
+  model_path: /home/klypar/Work/linkpred/trained_models/main_model_2.0_ros
+
+
+  diffusion:
+    # Number of steps.
+    num_t: 100
+    # Analogous to sampling temperature.
+    noise_scale: 0.0
+    # Final t.
+    min_t: 0.01
+
+
