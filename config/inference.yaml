@@ -18,7 +18,7 @@ bd:
   
 
   # Path to model weights.
-  model_path: ./trained_models/big_model_9.2_nr
+  model_path: ./trained_models/mbd-ba
 
 
   diffusion:
@@ -32,6 +32,6 @@ bd:
 
 lp:
   # Path to model weights.
-  model_path: ./linkpred/trained_models/main_model_2.0_ros
+  model_path: ./linkpred/trained_models/arn
 
 
