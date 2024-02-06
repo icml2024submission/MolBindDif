@@ -17,7 +17,7 @@ evaluation:
   
 
   # Path to model weights.
-  model_path: ./trained_models/big_model_9.2
+  model_path: ./trained_models/mbd-ba
 
 
   diffusion:

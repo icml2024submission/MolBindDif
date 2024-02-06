@@ -14,7 +14,7 @@ bd:
   pt_hub_dir: ./.cache/torch/
   output_dir: ./inference_outputs/
   input_dir: 
-  input_file: ./test.csv
+  input_file: ./inference_inputs/test.csv
   
 
   # Path to model weights.
