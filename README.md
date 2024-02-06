@@ -9,6 +9,7 @@ Next, we recommend installing our code as a package. To do this, run the followi
 ```
 pip install -e .
 ```
+One will also need to install Voronota package and add it to the ```PATH```.
 ## Inference
 For now, the inference can only be performed on complexes from [PPI3D](http://bioinformatics.ibt.lt/ppi3d/) and with MolBindDif-ba model.
 The command to run the inference is
